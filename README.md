@@ -176,6 +176,7 @@ src/
 |---|---|
 | `npm run dev` | Start dev server at localhost:5173 |
 | `npm run build` | Production build → `dist/` |
+| `npm test` | Run the progress backup and restore tests |
 | `npm run preview` | Preview production build locally |
 | `npm run lint` | Run ESLint |
 
@@ -189,6 +190,8 @@ src/
 - ✅ Keys never leave your browser (except to the AI provider directly)
 - ⚠️ Any JS running on the page could access localStorage — use a key with **minimal permissions/spend limits**
 - ⚠️ Keys are visible in browser DevTools to anyone with physical access
+
+Progress backups contain study records. Provider credentials and device settings stay on the device. Older backups still restore progress. If you previously shared a backup created with a provider key saved, rotate that key with the provider.
 
 For a production deployment with shared access, see v2 recommendations below.
 

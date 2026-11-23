@@ -383,10 +383,10 @@ export const useAppStore = create<AppStore>()(
 
       exportData: () => {
         const state = get();
+        // Back up only the study data restored below. Provider credentials belong to this device.
         return JSON.stringify(
           {
             userProfile: state.userProfile,
-            settings: state.settings,
             analytics: state.analytics,
             quizSessions: state.quizSessions,
             flaggedQuestions: state.flaggedQuestions,
@@ -394,7 +394,6 @@ export const useAppStore = create<AppStore>()(
             flashcardProgress: state.flashcardProgress,
             achievements: state.achievements,
             savedConceptCards: state.savedConceptCards,
-            exportedAt: new Date().toISOString(),
           },
           null,
           2,
